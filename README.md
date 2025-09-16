@@ -1,53 +1,94 @@
-# 🩺 MediMeet - Doctors Appointment Platform
+# MediNow – Doctor Appointment & Video Consultation Platform  
 
-Welcome to **MediMeet**, a smart, full-stack platform for seamless doctor-patient interaction and appointment scheduling! 💊💻  
-Built with modern technologies like **MERN**, MediMeet simplifies healthcare access by allowing patients to book appointments, view doctors' availability, and manage their visits — all from the comfort of home. 🏥📅
+MediNow is a **Full-Stack Doctor Appointment Platform** where patients can easily search for doctors, book appointments, and take **online video consultations**. Doctors can manage their schedules, conduct consultations via secure video calls, and receive payments for their services.  
 
----
-
-# 🔥 Demo
-![](https://github.com/shivamsharma006/MediMeet-Doctors-Appointment-Platform/blob/main/Website%20Screenshots/Screenshot%202025-06-14%20165547.png?raw=true)
-![](https://github.com/shivamsharma006/MediMeet-Doctors-Appointment-Platform/blob/main/Website%20Screenshots/Screenshot%202025-06-14%20165606.png?raw=true)
-![](https://github.com/shivamsharma006/MediMeet-Doctors-Appointment-Platform/blob/main/Website%20Screenshots/Screenshot%202025-06-14%20165620.png?raw=true)
-![](https://github.com/shivamsharma006/MediMeet-Doctors-Appointment-Platform/blob/main/Website%20Screenshots/Screenshot%202025-06-14%20165647.png?raw=true)
-![](https://github.com/shivamsharma006/MediMeet-Doctors-Appointment-Platform/blob/main/Website%20Screenshots/Screenshot%202025-06-14%20165713.png?raw=true)
-![](https://github.com/shivamsharma006/MediMeet-Doctors-Appointment-Platform/blob/main/Website%20Screenshots/Screenshot%202025-06-14%20165733.png?raw=true)
+The platform integrates **Next.js, Neon (Postgres), Clerk, Tailwind, Shadcn UI, and Vonage** to provide a seamless healthcare booking and telemedicine experience.  
 
 ---
 
-## 📚 About the Project
+## 📖 About  
 
-MediMeet bridges the gap between doctors and patients through a reliable, digital appointment system. Whether it's finding the right doctor, booking a consultation, or managing schedules — MediMeet brings healthcare closer with just a few clicks. 👨‍⚕️📲
+MediNow provides an end-to-end solution for digital healthcare:  
 
-### 🎯 Key Goals
+- Patients can **browse doctors by specialty**, **book appointments**, and **consult via video calls**.  
+- Doctors can **set availability**, **conduct secure video consultations**, and **charge patients per session**.  
+- The system handles **authentication, scheduling, payments, and notifications**.  
 
-- 🧑‍⚕️ Allow patients to quickly find and book doctors
-- 📅 Enable real-time scheduling and cancellations
-- 💬 Offer a clean, intuitive user experience for both patients and doctors
-
----
-
-## 🚀 Key Features
-
-- **🔐 Secure Login & Signup** – Role-based auth for patients and doctors  
-- **🗂 Doctor Directory** – Search and filter doctors by specialization  
-- **📆 Appointment Booking System** – Schedule appointments with availability tracking  
-- **📋 Dashboards** – Personalized dashboards for doctors & patients  
-- **🗑 Cancel & Manage Appointments** – Flexible schedule handling  
-- **📧 Email Notifications** *(optional/planned)*  
-- **💬 Chat/Video Call Integration** *(optional/planned)*  
+✨ Key highlights:  
+- 👨‍⚕️ **Doctor & Patient Portals** – Separate dashboards for both roles.  
+- 📅 **Smart Appointment Booking** – Real-time doctor availability and clash-free scheduling.  
+- 📹 **Video Consultation** – Powered by **Vonage API** for secure calls.  
+- 💳 **Payment Integration** – Patients are charged for each consultation.  
+- 🔐 **Authentication** – Managed with **Clerk** (secure login & onboarding).  
+- 🎨 **Modern UI** – Tailored with **Tailwind CSS** and **Shadcn UI**.  
+- 🗄 **Database** – Cloud-hosted **Neon PostgreSQL**.  
 
 ---
 
-## ⚙️ Technologies Used
+## 🚀 Features  
 
-- **Frontend**: React.js, Tailwind CSS  
-- **Backend**: Node.js, Express.js  
-- **Database**: MongoDB with Mongoose  
-- **Authentication**: JWT (Role-based)  
-- **Cloud & Tools**: Firebase / Cloudinary *(optional for uploads)*  
-- **Deployment**: Vercel (Client) & Render/Heroku (Server)
+- 🧑‍🤝‍🧑 **Patient Dashboard** – Manage profile, bookings, and video calls.  
+- 👨‍⚕️ **Doctor Dashboard** – Manage schedules, consultations, and earnings.  
+- 🔐 **Secure Authentication** – Clerk-based login/signup & onboarding.  
+- 📲 **Notifications** – Appointment confirmations/reminders via Vonage.  
+- 📹 **Telemedicine Support** – One-click join video consultation.  
+- 💳 **Payments** – Session-based consultation charges.  
+- 📊 **Admin Panel** – Manage users, doctors, and transactions.  
+- 📱 **Fully Responsive** – Works seamlessly across desktop and mobile.  
 
 ---
+
+## 🛠️ Tech Stack  
+
+**Frontend & Backend**  
+- ⚡ [Next.js](https://nextjs.org/) – Full-stack React framework  
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework  
+- 🖌 [Shadcn UI](https://ui.shadcn.com/) – UI components  
+
+**Authentication**  
+- 🔑 [Clerk](https://clerk.dev/) – User authentication & onboarding  
+
+**Database**  
+- 🗄 [Neon](https://neon.tech/) – Serverless PostgreSQL  
+
+**Video & Notifications**  
+- 📹 [Vonage API](https://www.vonage.com/) – Video calls, SMS, notifications  
+
+**Other Tools**  
+- 🚀 Vercel – Hosting & deployment  
+- 🛢 Prisma – ORM for Neon PostgreSQL  
+
+---
+
+## 📥 Installation  
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/DheerajFulara/MediNow.git
+2. Install dependencies:
+   ```bash
+   npm install
+3. Create a .env.local file in the root and add the following variables:
+   ```bash
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=clerk key
+    CLERK_SECRET_KEY=clerk secret key
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+    
+    NEXT_PUBLIC_VONAGE_APPLICATION_ID=write your vonage id
+    VONAGE_PRIVATE_KEY=lib/private.key
+    
+    DATABASE_URL=write your neon db key
+ 4. Run the development server:
+    ```bash
+    npm run dev
+---
+
+
+
+
+
 
 
